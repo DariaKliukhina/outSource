@@ -1,0 +1,80 @@
+.btn {
+  font-size: 14px;
+  line-height: 20px;
+  padding: 13px 26px;
+  transition: .3s;
+  color: $white;
+  background-color: $second-color;
+  border-radius: 2px;
+  cursor: pointer;
+  border: none;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+
+  @include xs {
+    width: auto;
+  }
+
+  @include md {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  &:hover,
+  &:focus {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), $second-color;
+  }
+
+  &:active {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), $second-color;
+  }
+
+  &.dark-style {
+    background-color: $dark;
+
+    &:hover,
+    &:focus {
+      background: $second-color;
+    }
+
+    &:active {
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), $second-color;
+    }
+  }
+
+  &.transparent-style {
+    background-color: transparent;
+    box-shadow: inset 0 0 0 1px $second-color;
+    color: $second-color;
+
+    &:hover,
+    &:focus {
+      color: $white;
+      background: $second-color;
+    }
+
+    &:active {
+      box-shadow: none;
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), $second-color;
+    }
+  }
+
+  &.pale-style {
+    background-color: transparent;
+    color: $black;
+    box-shadow: inset 0 0 0 1px $black--20;
+
+    &:hover,
+    &:focus {
+      color: $white;
+      background: $black;
+      box-shadow: none;
+    }
+
+    &:active {
+      box-shadow: none;
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), $white;
+    }
+  }
+}

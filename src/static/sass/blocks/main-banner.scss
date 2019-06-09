@@ -1,0 +1,33 @@
+.main-banner {
+  background-color: $turquois;
+
+}
+
+.main-banner__container {
+  background-image: url("../img/main-bg.png");
+  background-position: top center;
+  background-repeat: no-repeat;
+  padding: 216px 20px 40px 20px;
+  background-size: auto 256px;
+
+  @include md {
+    background-position: right center;
+    background-size: 60%;
+    padding: 80px 20px;
+  }
+}
+
+.main-banner__title {
+  font-size: 26px;
+  line-height: 30px;
+  font-weight: 400;
+  max-width: 212px;
+  margin-bottom: 30px;
+
+  @include md {
+    font-size: 60px;
+    line-height: 1;
+    max-width: 484px;
+    margin-bottom: 40px;
+  }
+}

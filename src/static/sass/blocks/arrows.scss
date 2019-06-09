@@ -1,0 +1,24 @@
+.arrows__item {
+  background-color: transparent;
+  border: none;
+
+  width: 30px;
+  height: 14px;
+  cursor: pointer;
+
+  &--next {
+    text-align: right;
+  }
+
+  svg {
+    width: auto;
+    height: 100%;
+    transition: .3s;
+  }
+
+  &:hover {
+    svg * {
+      stroke: $second-color;
+    }
+  }
+}

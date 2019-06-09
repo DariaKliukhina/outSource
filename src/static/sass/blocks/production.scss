@@ -1,0 +1,26 @@
+.production {
+  background-color: $gray-bg;
+  padding: 40px 10px;
+}
+
+.production__item {
+  min-height: 125px;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+
+  @include md {
+    min-height: 360px;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    padding: 192px 30px 30px 30px;
+
+    svg {
+      position: absolute;
+      top: 30px;
+      left: 30px;
+    }
+  }
+}

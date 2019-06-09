@@ -1,0 +1,37 @@
+.statistic {
+  @include md {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.statistic__item {
+  padding: 30px 0;
+  border-bottom: 1px solid $black--10;
+
+  &:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  @include md {
+    width: 30%;
+    max-width: 310px;
+    margin-right: 3%;
+    border: none;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.statistic__value {
+  font-size: 28px;
+  line-height: 40px;
+  color: $second-color;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+

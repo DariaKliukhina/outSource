@@ -1,0 +1,46 @@
+.nav {
+  padding: 0 20px;
+
+  @include md {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+}
+
+.nav__item {
+  display: block;
+  border-bottom: 1px solid $black--10;
+  color: $black--40;
+  padding: 14px 0;
+  font-size: 16px;
+  line-height: 22px;
+
+  @include md {
+    font-size: 14px;
+    line-height: 20px;
+    padding: 0 15px;
+    border: none;
+
+    &:first-child {
+      padding-left: 0;
+    }
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+}
+
+.nav--bold {
+  .nav__item {
+    color: $black;
+    font-weight: bold;
+
+    @include md {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+}

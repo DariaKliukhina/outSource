@@ -1,0 +1,11 @@
+.link {
+  &--pale {
+    color: $black--40;
+    transition: .3s;
+
+    &:hover,
+    &:focus {
+      color: $second-color;
+    }
+  }
+}

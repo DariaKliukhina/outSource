@@ -1,0 +1,34 @@
+.info-tabs {
+
+}
+
+.info-tabs__content {
+  position: relative;
+
+  @include xl {
+    max-width: 540px;
+    padding-right: 40px;
+  }
+}
+
+.info-tabs__item {
+  list-style: none;
+  pointer-events: none;
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  &.current {
+    pointer-events: initial;
+    position: relative;
+    opacity: 1;
+  }
+}
+
+.info-tabs__text {
+  p {
+    margin-bottom: 15px;
+  }
+}

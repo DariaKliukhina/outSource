@@ -1,0 +1,94 @@
+.partners {
+  overflow: hidden;
+  padding-top: 70px;
+
+  @include xl {
+    padding-top: 0;
+  }
+}
+
+.partners__wrap {
+  width: calc(100% + 20px);
+  margin-left: -10px;
+  margin-right: -10px;
+  display: flex;
+  flex-wrap: wrap;
+
+  @include md {
+    width: calc(100% + 40px);
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+
+.partners__item {
+  width: calc(100%/12*4 - 20px);
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-bottom: 20px;
+  list-style: none;
+
+  @include md {
+    width: calc(100%/12*4 - 40px);
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 40px;
+    min-height: 100px;
+  }
+
+  a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50px;
+    border: 1px solid $white;
+    transition: .3s;
+    opacity: 0.4;
+
+    svg {
+      max-height: 70%;
+      width: auto;
+      max-width: 70%;
+    }
+
+    &:hover {
+      opacity: 1;
+      border-color: $second-color;
+
+      svg * {
+        stroke: $second-color;
+        fill: $second-color;;
+      }
+    }
+
+    &:focus {
+      opacity: 1;
+      border-color: $second-color;
+    }
+
+    &.current {
+      opacity: 1;
+      border-color: $second-color;
+      background-color: $second-color;
+
+      svg * {
+        stroke: $white;
+      }
+
+      &:hover,
+      &:focus {
+        opacity: 1;
+        border-color: $second-color;
+        background-color: $second-color;
+
+        svg * {
+          stroke: $white;
+          fill: $white;
+        }
+      }
+    }
+  }
+
+}

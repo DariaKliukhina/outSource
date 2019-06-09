@@ -1,5 +1,24 @@
 @import "normalize";
 @import "global/variables";
 @import "global/global";
-//@import "blocks/test";
-
+@import "blocks/container";
+@import "blocks/visually-hidden";
+@import "blocks/main-header";
+@import "blocks/main-banner";
+@import "blocks/content-section";
+@import "blocks/mobile-only";
+@import "blocks/desktop-only";
+@import "blocks/logo";
+@import "blocks/nav";
+@import "blocks/link";
+@import "blocks/main";
+@import "blocks/btn";
+@import "blocks/production";
+@import "blocks/cards";
+@import "blocks/industries";
+@import "blocks/info-tabs";
+@import "blocks/slider";
+@import "blocks/arrows";
+@import "blocks/partners";
+@import "blocks/press";
+@import "blocks/statistic";

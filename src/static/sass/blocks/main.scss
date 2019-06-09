@@ -1,0 +1,7 @@
+.main {
+  padding-top: 46px;
+
+  @include md {
+    padding-top: 0;
+  }
+}

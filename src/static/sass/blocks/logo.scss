@@ -1,0 +1,15 @@
+.logo {
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: bold;
+  color: $black;
+
+  @include md {
+    font-size: 22px;
+    line-height: 26px;
+  }
+}
+
+.logo__deco {
+  color: $second-color;
+}

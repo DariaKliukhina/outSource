@@ -62,13 +62,22 @@ body {
   color: $main-color;
   min-width: 320px;
 
+  @include md {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
   @include land {
     min-height: 100vh;
+  }
+
+  &.open-menu {
+    overflow: hidden;
   }
 }
 
 body p {
-  margin-bottom: 15px;
+  margin: 0;
 }
 
 img {

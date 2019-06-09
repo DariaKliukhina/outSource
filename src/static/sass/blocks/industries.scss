@@ -1,0 +1,37 @@
+.industries {
+  padding-bottom: 100px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @include md {
+    padding-bottom: 80px;
+  }
+}
+
+.industries__slider-wrap {
+  text-align: center;
+  width: calc(100% + 20px);
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+.industries__item {
+  min-height: 150px;
+  padding: 100px 10px 30px 10px;
+  display: block;
+  height: 100%;
+  position: relative;
+
+  svg {
+    position: absolute;
+    top: 85px;
+    left: 50%;
+    width: auto;
+    max-height: 70px;
+    transform: translate(-50%, -100%);
+  }
+}
+
+.industries__item-wrap {
+  padding: 0 10px;
+}
