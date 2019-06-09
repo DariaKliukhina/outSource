@@ -1,0 +1,76 @@
+$main-color: #4c4c4c;
+$black: #000000;
+$black--50: rgba(0, 0, 0, 0.5);
+$black--70: rgba(0, 0, 0, 0.7);
+$white: #ffffff;
+$white--50: rgba(255, 255, 255, 0.5);
+$white--40: rgba(255, 255, 255, 0.4);
+
+$xs-width: 359.98px;
+$sm-width: 575.98px;
+$md-width: 767.98px;
+$lg-width: 968.98px;
+$xl-width: 1199.98px;
+$xxl-width: 1299.98px;
+$xxxl-width: 1599.98px;
+$xxxxl-width: 1799.98px;
+
+
+@mixin xs {
+  @media screen and  (min-width: #{$xs-width}) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media screen and  (min-width: #{$sm-width}) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media screen and  (min-width: #{$md-width}) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media screen and  (min-width: #{$lg-width}) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media screen and  (min-width: #{$xl-width}) {
+    @content;
+  }
+}
+
+@mixin xxl {
+  @media screen and (min-width: #{$xxl-width}) {
+    @content;
+  }
+}
+
+@mixin xxxl {
+  @media screen and  (min-width: #{$xxxl-width}) {
+    @content;
+  }
+}
+
+@mixin xxxxl {
+  @media screen and  (min-width: #{$xxxxl-width}) {
+    @content;
+  }
+}
+
+
+@mixin land{
+  @media screen and (orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin size($size) {
+  width: calc(100%/12* #{$size});
+}

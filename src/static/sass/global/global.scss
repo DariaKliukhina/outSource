@@ -1,0 +1,83 @@
+html {
+  box-sizing: border-box;
+  font-size: 14px;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+button:active, button:focus {
+  outline: none !important;
+}
+button::-moz-focus-inner {
+  border: 0 !important;
+}
+
+a:active, a:focus { outline: none; }
+
+input, textarea {outline:none;}
+input:active, textarea:active {outline:none;}
+:focus {outline:none;}
+
+@font-face {
+  font-family: "Suisse Int";
+  src: url("../fonts/SuisseIntl-Regular.ttf") format("opentype");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Suisse Int";
+  src: url("../fonts/SuisseIntl-Medium.ttf") format("opentype");
+  font-weight: 500;
+}
+
+
+@font-face {
+  font-family: "Suisse Int";
+  src: url("../fonts/SuisseIntl-Bold.otf") format("opentype");
+  font-weight: 700;
+}
+
+
+body {
+  font-family: 'Suisse Int', 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: normal;
+  text-align: left;
+  background-color: $white;
+  color: $main-color;
+  min-width: 320px;
+
+  @include land {
+    min-height: 100vh;
+  }
+}
+
+body p {
+  margin-bottom: 15px;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: $main-color;
+  transition: .3s;
+}
