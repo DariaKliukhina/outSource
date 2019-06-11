@@ -90,3 +90,6 @@ a {
   color: $main-color;
   transition: .3s;
 }
+textarea {
+  resize: none;
+}

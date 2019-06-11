@@ -1,11 +1,21 @@
 .link {
+  transition: .3s;
+  color: $white;
+  display: inline-block;
+  vertical-align: middle;
+
   &--pale {
     color: $black--40;
-    transition: .3s;
-
-    &:hover,
-    &:focus {
-      color: $second-color;
-    }
   }
+
+  &--opacity-white {
+  color: $white--40;
+  }
+
+  &:hover,
+  &:focus {
+    color: $second-color;
+  }
+
+
 }

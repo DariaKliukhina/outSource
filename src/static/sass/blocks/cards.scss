@@ -8,8 +8,7 @@
     margin-bottom: 0;
   }
 
-  &:hover,
-  &:focus {
+  &:hover {
     background-color: transparent;
     box-shadow: inset 0 0 0 1px $second-color;
     color: $second-color;
@@ -37,9 +36,22 @@
   }
 
   @include md {
+    &.item-2 {
+      width: calc(100%/12*6 - 40px);
+      margin-right: 20px;
+      margin-left: 20px;
+      margin-bottom: 0;
+    }
 
     &.item-3 {
       width: calc(100%/12*4 - 40px);
+      margin-right: 20px;
+      margin-left: 20px;
+      margin-bottom: 0;
+    }
+
+    &.item-4 {
+      width: calc(100%/12*3 - 40px);
       margin-right: 20px;
       margin-left: 20px;
       margin-bottom: 0;
@@ -62,6 +74,7 @@
 
 .cards__item-content {
   max-width: 320px;
+  position: relative;
 }
 
 .cards__main {
@@ -78,4 +91,27 @@
 
 blockquote.cards__item-description {
   color: $black;
+}
+
+.cards__arrow {
+  width: 14px;
+  height: 14px;
+  margin-top: auto;
+  position: relative;
+
+  svg {
+  position: relative;
+    width: 100%;
+    height: auto;
+    transform: none;
+    left: 0;
+    top: 0;
+  }
+}
+
+
+.cards__date {
+  color: $black;
+  opacity: 0.5;
+  margin-bottom: 10px;
 }

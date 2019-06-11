@@ -1,0 +1,25 @@
+.feedback {
+
+}
+
+.feedback__content {
+  @include md {
+    display: flex;
+  }
+}
+
+.feedback__col {
+  @include md {
+    width: 50%;
+  }
+}
+
+.feedback__title {
+  @include md {
+    margin-bottom: 20px;
+  }
+}
+
+.feedback__description {
+  max-width: 374px;
+}

@@ -1,6 +1,11 @@
 .production {
   background-color: $gray-bg;
   padding: 40px 10px;
+
+  @include md {
+    padding-top: 0;
+    background-image: linear-gradient(to bottom, $turquois 0%, $turquois 192px, $gray-bg 192px, $gray-bg 100%);
+  }
 }
 
 .production__item {
@@ -13,8 +18,8 @@
 
   @include md {
     min-height: 360px;
-    flex-direction: column-reverse;
-    justify-content: flex-end;
+    flex-direction: column;
+    justify-content: flex-start;
     padding: 192px 30px 30px 30px;
 
     svg {

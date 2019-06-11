@@ -1,0 +1,7 @@
+.copyrigth {
+  opacity: 0.3;
+
+  @include md {
+    text-transform: uppercase;
+  }
+}

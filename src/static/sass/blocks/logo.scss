@@ -4,6 +4,10 @@
   font-weight: bold;
   color: $black;
 
+  &--white {
+    color: $white;
+  }
+
   @include md {
     font-size: 22px;
     line-height: 26px;

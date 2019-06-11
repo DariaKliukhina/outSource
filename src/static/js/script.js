@@ -37,12 +37,11 @@ $(document).ready(function () {
       arrows: false,
       infinite: true,
       dots: false,
-      responsive: options
+      responsive: options,
     });
 
     let allSlides = slider.slick("getSlick").slideCount;
     let countBlock =  currentContainer.find('.jsAllSlides');
-    console.log(countBlock);
     countBlock.text(allSlides);
 
 
@@ -121,6 +120,67 @@ $(document).ready(function () {
 
     sliderInit(pressSlider, pressToShow, pressOptions);
   }
+
+  let newsSlider = $('.jsNewsSlider');
+  let width = $(window).width();
+
+    if (newsSlider.length > 0) {
+
+      if (width < 1199) {
+        let newsToShow = 3;
+        let newsOptions = [
+          {
+            breakpoint: 2600,
+            settings: "unslick"
+          },
+          {
+            breakpoint: 1199,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 1,
+            }
+          },
+          {
+            breakpoint: 578,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1,
+            }
+          },
+          {
+            breakpoint: 478,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1,
+            }
+          },
+        ];
+
+        sliderInit(newsSlider, newsToShow, newsOptions);
+
+        $(window).resize(function () {
+          let width = $(window).width();
+          if ((width < 1199) && !newsSlider.hasClass('slick-slider')) {
+            sliderInit(newsSlider, newsToShow, newsOptions);
+          }
+        });
+      }
+  }
+
+  //inputs
+
+  $('.input-block__input').focus(function(){
+    $(this).parents('.input-block').addClass('focused');
+  });
+
+  $('.input-block__input').blur(function(){
+    if(!$.trim(this.value).length) {
+      $(this).removeClass('filled');
+      $(this).parents('.input-block').removeClass('focused');
+    } else {
+      $(this).addClass('filled');
+    }
+  });
 
 
 });

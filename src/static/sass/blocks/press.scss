@@ -43,11 +43,6 @@
   flex-direction: column;
 }
 
-.press__date {
-  opacity: 0.5;
-  margin-bottom: 10px;
-}
-
 .press__cite {
   padding-top: 10px;
   margin-top: auto;
@@ -55,7 +50,6 @@
 
 .press__slider-wrap {
   width: 140%;
-  //transform: translateX(-25%);
 
   @include md {
     width: calc(100% + 40px);

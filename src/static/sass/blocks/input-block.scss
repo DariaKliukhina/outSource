@@ -1,0 +1,31 @@
+.input-block{
+  position: relative;
+  display: block;
+}
+
+.input-block__label {
+  font-size: 16px;
+  line-height: 24px;
+  color: $white--40;
+  position: absolute;
+  left: 0;
+  bottom: 10px;
+  transition: .3s;
+}
+
+.input-block__input {
+  padding: 10px 0;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid $white--40;
+  width: 100%;
+  color: $white;
+}
+
+.focused {
+  .input-block__label {
+    bottom: 0;
+    top: 0;
+  transform: translateY(-35%);
+  }
+}

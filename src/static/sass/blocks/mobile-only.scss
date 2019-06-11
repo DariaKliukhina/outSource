@@ -1,5 +1,5 @@
 .mobile-only {
   @include md {
-    display: none;
+    display: none !important;
   }
 }
