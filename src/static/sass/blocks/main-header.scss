@@ -150,4 +150,8 @@
 
 .main-header__contacts-link {
   padding-right: 30px;
+
+  &:hover {
+    color: $second-color;
+  }
 }

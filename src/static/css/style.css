@@ -569,6 +569,8 @@ textarea {
 
 .main-header__contacts-link {
   padding-right: 30px; }
+  .main-header__contacts-link:hover {
+    color: #EB016E; }
 
 .main-banner {
   background-color: #D5EEEB; }
@@ -705,7 +707,9 @@ textarea {
   color: rgba(0, 0, 0, 0.4);
   padding: 14px 0;
   font-size: 16px;
-  line-height: 22px; }
+  line-height: 22px;
+  -webkit-transition: .3s;
+  transition: .3s; }
   @media screen and (min-width: 767.98px) {
     .nav__item {
       font-size: 14px;
@@ -716,6 +720,8 @@ textarea {
         padding-left: 0; }
       .nav__item:last-child {
         padding-right: 0; } }
+  .nav__item:hover {
+    color: #EB016E; }
 
 .nav--bold .nav__item {
   color: #000000;
@@ -724,6 +730,8 @@ textarea {
     .nav--bold .nav__item {
       font-size: 16px;
       line-height: 24px; } }
+  .nav--bold .nav__item:hover {
+    color: #EB016E; }
 
 .link {
   -webkit-transition: .3s;
@@ -1030,7 +1038,10 @@ blockquote.cards__item-description {
 
 .partners {
   overflow: hidden;
-  padding-top: 70px; }
+  padding-top: 70px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1; }
   @media screen and (min-width: 1199.98px) {
     .partners {
       padding-top: 0; } }
@@ -1150,7 +1161,8 @@ blockquote.cards__item-description {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
-          flex-direction: column; }
+          flex-direction: column;
+  width: 100%; }
 
 .press__cite {
   padding-top: 10px;
@@ -1410,7 +1422,8 @@ blockquote.cards__item-description {
   min-height: 230px;
   font-size: 16px;
   line-height: 24px;
-  position: relative; }
+  position: relative;
+  height: 100%; }
   .news__item::after {
     content: '';
     display: block;

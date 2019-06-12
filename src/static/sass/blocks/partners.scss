@@ -1,6 +1,7 @@
 .partners {
   overflow: hidden;
   padding-top: 70px;
+  flex-grow: 1;
 
   @include xl {
     padding-top: 0;

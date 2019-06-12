@@ -17,6 +17,7 @@
   padding: 14px 0;
   font-size: 16px;
   line-height: 22px;
+  transition: .3s;
 
   @include md {
     font-size: 14px;
@@ -31,6 +32,10 @@
       padding-right: 0;
     }
   }
+
+  &:hover {
+    color: $second-color;
+  }
 }
 
 .nav--bold {
@@ -41,6 +46,10 @@
     @include md {
       font-size: 16px;
       line-height: 24px;
+    }
+
+    &:hover {
+      color: $second-color;
     }
   }
 }
