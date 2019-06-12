@@ -37,6 +37,7 @@
     &.mobile-reverse {
       flex-direction: row;
       align-items: flex-start;
+      justify-content: space-between;
     }
   }
 }
@@ -46,9 +47,11 @@
   padding-top: 10px;
   font-size: 13px;
   line-height: 18px;
+  max-width: 100%;
 
   @include xl {
     padding-top: 0;
+    max-width: 60%;
   }
 }
 

@@ -14,6 +14,7 @@ var server = require("browser-sync").create();
 var run = require("run-sequence");
 var del = require("del");
 var uglify = require("gulp-uglify");
+var babel = require('gulp-babel');
 
 gulp.task("style", function() {
     gulp.src("src/static/sass/style.scss")
@@ -60,17 +61,32 @@ gulp.task("serve", ["style"], function() {
     gulp.watch("src/static/sass/**/*.{scss,sass}", ["style"]);
     gulp.watch("src/*.html").on("change", server.reload);
 });
-gulp.task("uglify", function () {
+
+
+gulp.task("babel", function () {
     gulp.src("src/static/js/script.js")
-        .pipe(uglify())
-        .pipe(rename("script.min.js"))
-        .pipe(gulp.dest("build/static/js"));
+      .pipe(babel({
+        presets: ['@babel/env']
+      }))
+      .pipe(rename("main.js"))
+      .pipe(gulp.dest("build/static/js"))
+      .pipe(gulp.dest("src/static/js"));
 });
+
+gulp.task("uglify", function () {
+  gulp.src("src/static/js/script.js")
+    .pipe(uglify())
+    .pipe(rename("script.min.js"))
+    .pipe(gulp.dest("src/static/js"))
+    .pipe(gulp.dest("build/static/js"));
+});
+
 gulp.task("build", function (done) {
     run(
         "clean",
         "copy",
         "style",
+        "babel",
         // "uglify",
         // "sprite",
         // "html",

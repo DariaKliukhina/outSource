@@ -1304,16 +1304,21 @@ blockquote.cards__item-description {
                 flex-direction: row;
         -webkit-box-align: start;
             -ms-flex-align: start;
-                align-items: flex-start; } }
+                align-items: flex-start;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between; } }
 
 .form__agreed {
   padding-right: 24px;
   padding-top: 10px;
   font-size: 13px;
-  line-height: 18px; }
+  line-height: 18px;
+  max-width: 100%; }
   @media screen and (min-width: 1199.98px) {
     .form__agreed {
-      padding-top: 0; } }
+      padding-top: 0;
+      max-width: 60%; } }
 
 .form__btn {
   min-width: 216px; }

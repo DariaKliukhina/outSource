@@ -21,14 +21,14 @@ $(document).ready(function () {
     tabControl.removeClass('current');
 
     $(this).addClass('current');
-    $('"#' + currentId + '"').addClass('current');
+    $(`#${currentId}`).addClass('current');
   });
 
   //Sliders
 
   let industrySlider = $('.jsIndustrySlider');
 
-  const sliderInit = function (slider, slidesToShow, options) {
+  let sliderInit = (slider, slidesToShow, options) => {
     let currentContainer = slider.closest('.jsSliderContainer');
 
     slider.slick({
@@ -37,7 +37,7 @@ $(document).ready(function () {
       arrows: false,
       infinite: true,
       dots: false,
-      responsive: options
+      responsive: options,
     });
 
     let allSlides = slider.slick("getSlick").slideCount;
@@ -84,7 +84,7 @@ $(document).ready(function () {
           slidesToShow: 2,
           slidesToScroll: 1,
         }
-      }
+      },
     ];
 
     sliderInit(industrySlider, industryToShow, industryOptions);
@@ -115,7 +115,7 @@ $(document).ready(function () {
           slidesToShow: 2,
           slidesToScroll: 1,
         }
-      }
+      },
     ];
 
     sliderInit(pressSlider, pressToShow, pressOptions);
@@ -153,7 +153,7 @@ $(document).ready(function () {
               slidesToShow: 2,
               slidesToScroll: 1,
             }
-          }
+          },
         ];
 
         sliderInit(newsSlider, newsToShow, newsOptions);
@@ -169,6 +169,7 @@ $(document).ready(function () {
 
   //inputs
   let input = $('.input-block__input');
+
   input.focus(function(){
     $(this).parents('.input-block').addClass('focused');
   });
