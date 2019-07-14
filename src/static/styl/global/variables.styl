@@ -1,0 +1,90 @@
+main-color = #000000;
+second-color = #EB016E;
+dark = #202E35;
+darker = #05151D;
+
+gray-bg = #E5E5E5;
+light-gray = #f4f4f4;
+light-border = #E6E6E6;
+
+black = #000000;
+black--10 = rgba(0, 0, 0, 0.1);
+black--20 = rgba(0, 0, 0, 0.2);
+black--40 = rgba(0, 0, 0, 0.4);
+black--50 = rgba(0, 0, 0, 0.5);
+black--70 = rgba(0, 0, 0, 0.7);
+white = #ffffff;
+white--50 = rgba(255, 255, 255, 0.5);
+white--40 = rgba(255, 255, 255, 0.4);
+white--10 = rgba(255, 255, 255, 0.1);
+
+turquois = #D5EEEB;
+
+xs-width = 359.98px;
+sm-width = 575.98px;
+md-width = 767.98px;
+lg-width = 968.98px;
+xl-width = 1199.98px;
+xxl-width = 1299.98px;
+xxxl-width = 1599.98px;
+xxxxl-width = 1799.98px;
+
+
+ xs() {
+  @media screen and  (min-width: xs-width) {
+    {block}
+  }
+}
+
+ sm() {
+  @media screen and  (min-width: sm-width) {
+    {block}
+  }
+}
+
++md() {
+  @media screen and  (min-width: md-width) {
+    {block}
+  }
+}
+
+lg() {
+  @media screen and  (min-width: lg-width) {
+   {block}
+  }
+}
+
+xl() {
+  @media screen and  (min-width: xl-width) {
+    {block}
+  }
+}
+
+xxl() {
+  @media screen and (min-width: xxl-width) {
+    {block}
+  }
+}
+
+xxxl() {
+  @media screen and  (min-width: xxxl-width) {
+    {block}
+  }
+}
+
+xxxxl() {
+  @media screen and  (min-width: xxxxl-width) {
+    {block}
+  }
+}
+
+
+land(){
+  @media screen and (orientation: landscape) {
+    {block}
+  }
+}
+
+size(size) {
+  width: calc(100%/12* size);
+}

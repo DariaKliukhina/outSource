@@ -1,7 +1,7 @@
 "use strict";
 
 var gulp = require("gulp");
-var sass = require("gulp-sass");
+
 var plumber = require("gulp-plumber");
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
@@ -16,12 +16,14 @@ var del = require("del");
 var uglify = require("gulp-uglify");
 var babel = require('gulp-babel');
 var pug = require('gulp-pug');
+var stylus = require('gulp-stylus');
+
 
 gulp.task("style", function() {
-    gulp.src("src/static/sass/style.scss")
+    gulp.src("src/static/styl/style.styl")
         .pipe(plumber())
-      .pipe(sass({
-        includePaths: require('node-normalize-scss').includePaths
+      .pipe(stylus({
+        // includePaths: require('node-normalize-scss').includePaths
       }))
         .pipe(postcss([
             autoprefixer()
@@ -70,7 +72,7 @@ gulp.task("serve", ["style"], function() {
         cors: true,
         ui: false
     });
-    gulp.watch("src/static/sass/**/*.{scss,sass}", ["style"]);
+    gulp.watch("src/static/styl/**/*.styl", ["style"]);
     gulp.watch("src/views/*.pug", ["views"]);
     gulp.watch("src/*.html").on("change", server.reload);
 });

@@ -1,0 +1,145 @@
+.main-header
+  background-color: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  left: 0;
+  right: 0;
+  z-index: 20;
+
+ md()
+    position: relative;
+
+
+.main-header__content
+   md()
+    position: relative;
+
+
+.main-header__logo-block
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 5;
+  background-color: white;
+
+  md()
+    box-shadow: none;
+    padding: 0;
+    position: absolute;
+    left: 20px;
+    top: 15px;
+    background-color: transparent;
+
+
+.main-header__mobile-btn
+  width: 15px;
+  height: 15px;
+  margin-left: 20px;
+  background-color: transparent;
+  border: none;
+
+
+.main-header__nav
+  position: fixed;
+  height: 100vh;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  padding-top: 46px;
+  z-index: 3;
+  transform: translateY(-100%);
+  transition: .6s;
+  overflow-y: auto;
+
+  &.open
+    transform: translateY(0);
+
+  md()
+    position: relative;
+    height: auto;
+    transform: translateY(0);
+    padding-top: 0;
+    display: flex;
+    flex-direction: column-reverse;
+
+
+
+.main-header__full-contacts
+  background-color: light-gray;
+  color: black;
+  padding: 10px 20px;
+
+
+.main-header__contacts-item
+  padding: 20px 0;
+  font-size: 14px;
+  line-height: 20px;
+  border-bottom: 1px solid black--10;
+
+  &--flex
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+
+  &:last-child
+    border: none;
+
+
+  p
+    max-width: 95%;
+
+
+.main-header__nav-block
+  md()
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 60px;
+    padding: 10px 0;
+
+    &.with-logo
+      padding-left: 170px;
+
+
+    &:last-child
+      border-bottom: 1px solid black--10;
+
+
+    &.tablet-col
+      flex-direction: column;
+      align-items: flex-start;
+
+      xl()
+        flex-direction: row;
+        align-items: center;
+
+
+.main-header__main-nav
+  md()
+    margin-left: auto;
+
+
+.main-header__contacts
+  md()
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+
+
+  xl()
+    padding-top: 0;
+
+
+.main-header__contacts-link
+  padding-right: 30px;
+
+  &:hover
+    color: second-color;
