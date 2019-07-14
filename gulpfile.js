@@ -15,6 +15,7 @@ var run = require("run-sequence");
 var del = require("del");
 var uglify = require("gulp-uglify");
 var babel = require('gulp-babel');
+var pug = require('gulp-pug');
 
 gulp.task("style", function() {
     gulp.src("src/static/sass/style.scss")
@@ -41,6 +42,18 @@ gulp.task("sprite", function() {
         .pipe(rename("sprite.svg"))
         .pipe(gulp.dest("build/static/img"));
 });
+
+gulp.task('views', function buildHTML() {
+  return gulp.src('src/views/*.pug')
+    .pipe(pug({
+      pretty: true
+    }))
+
+    .pipe(gulp.dest("src"))
+    .pipe(gulp.dest("build"))
+
+});
+
 gulp.task("html", function() {
     return gulp.src("src/*.html")
         .pipe(posthtml([
@@ -48,7 +61,6 @@ gulp.task("html", function() {
         ]))
         .pipe(gulp.dest("build"));
 });
-
 
 gulp.task("serve", ["style"], function() {
     server.init({
@@ -59,6 +71,7 @@ gulp.task("serve", ["style"], function() {
         ui: false
     });
     gulp.watch("src/static/sass/**/*.{scss,sass}", ["style"]);
+    gulp.watch("src/views/*.pug", ["views"]);
     gulp.watch("src/*.html").on("change", server.reload);
 });
 
@@ -87,9 +100,7 @@ gulp.task("build", function (done) {
         "copy",
         "style",
         "babel",
-        // "uglify",
-        // "sprite",
-        // "html",
+        "views",
         done
     );
 });
@@ -105,6 +116,8 @@ gulp.task("copy", function (done) {
     })
         .pipe(gulp.dest("build/"));
 });
+
+
 gulp.task("clean", function () {
     return del("build");
 });
