@@ -7,7 +7,7 @@
     "@babel/core": "^7.4.5",
     "@babel/preset-env": "^7.4.5",
     "autoprefixer": "7.2.x",
-    "browser-sync": "2.23.x",
+    "browser-sync": "2.27.x",
     "del": "4.1.1",
     "gulp": "3.9.x",
     "gulp-babel": "^8.0.0",
